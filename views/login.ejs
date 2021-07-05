@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head.ejs') %> 
+</head>
+<body>
+  <section class="p-5">
+    <div class="container">
+      <div class="row d-flex flex-collumn gap-4 align-items-center justify-content-center">
+        <img src="assets/img/score.png" alt="" class="img-fluid rounded-pill">
+        <h1 style="color: black;">Qtscore</h1>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+    </div>
+  </section>
+  <%- include('./partials/footer.ejs') %> 
+
+</body>
+
+</html>
