@@ -6,26 +6,28 @@
 <body>
   <section class="p-5">
     <div class="container">
-      <div class="row d-flex flex-collumn gap-4 align-items-center justify-content-center">
-        <img src="assets/img/score.png" alt="" class="img-fluid rounded-pill">
-        <h1 style="color: black;">Qtscore</h1>
+      <div class="row d-flex flex-collumn gap-4 align-items-center justify-content-center text-center">
+        <img src="img/score.png" alt="" class="img-fluid" style="width: 250px; height: 250px; border-radius: 50%;">
+        <h1 style="color: black;">Qtscore Admin Panel</h1>
       </div>
 
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <form action="login" method="POST" class="d-flex flex-column align-items-center justify-content-center">
+        <div class="form-group my-4">
+          <label for="username">Username</label>
+          <input type="username" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter username" style="width: 30vw;">
         </div>
-        <div class="form-group">
+        <div class="form-group my-4">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password" style="width: 30vw;">
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary my-4 btn-lg" style="width: 30vw;">Login</button>
       </form>
-
     </div>
   </section>
+
+  <br/>
+  <br/>
+  <br/>
   <%- include('./partials/footer.ejs') %> 
 
 </body>

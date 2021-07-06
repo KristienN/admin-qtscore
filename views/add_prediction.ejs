@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('./partials/head.ejs') %> 
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+
+    <section class="p-5" id="add">
+        <div class="container">
+            <h2 class="my-5">Add Prediction</h2>
+
+            <form action="prediction/add" method="POST">
+                <div class="form-group row my-5">
+                    <div class="col-sm-6">
+                        <label for="home_team">Home Team</label>
+                        <input type="home_team" class="form-control" id="home_team" name="home_team" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 30vw;">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="away_team">Away Team</label>
+                        <input type="away_team" class="form-control" id="away_team" name="away_team" aria-describedby="emailHelp" placeholder="Enter Away Team" style="width: 30vw;">
+                    </div>
+                </div>
+                <div class="form-group row my-5">
+                    <div class="col-sm-6">
+                        <label for="home_score">Home Score</label>
+                        <input type="number" class="form-control" id="home_score" name="home_score" aria-describedby="emailHelp" value=0 style="width: 10vw;">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="away_score">Away Score</label>
+                        <input type="number" class="form-control" id="away_score" name="away_score" aria-describedby="emailHelp" value=0 placeholder="Enter username" style="width: 10vw;">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-success">Submit Prediction</button>
+            </form>
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs') %> 
+    
+</body>
+</html>

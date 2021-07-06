@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 const predictionSchema = new Schema({
     home_team : {type: String, required: true},
     away_team : {type: String, required: true},
-    home_score : {type: String, required: true},
-    away_score : {type: String, required: true},
+    home_score : {type: Number, required: true},
+    away_score : {type: Number, required: true},
 }, {timestamps: true});
 
 const Prediction = mongoose.model('Prediction', predictionSchema);

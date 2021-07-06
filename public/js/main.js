@@ -5,7 +5,48 @@
 * License: https://bootstrapmade.com/license/
 */
 
-// Contact form
+$(document).ready(function(){
+
+    $('#update-btn').click(function(e){
+        e.preventDefault();
+        const id = $('#id').val();
+
+        const home_team = $('#home_team').val();
+        const away_team = $('#away_team').val();
+        const home_score = $('#home_score').val();
+        const away_score = $('#away_score').val();
+
+        const data = {
+            home_team,
+            away_team,
+            home_score,
+            away_score
+        };
+
+
+        $.ajax({
+            type: "PUT",
+            url: `/prediction/update/${id}`,
+            data: data,
+            success: function (response) {
+                alert("Updated succesfully")
+            }
+        });
+    })
+
+    $('#delete-btn').click(function(e){
+        const id = $(this).attr("data-id");
+        if(confirm("Are you sure you want to delete?")){
+            $.ajax({
+                type: "DELETE",
+                url: `/prediction/delete/${id}`,
+            });
+            location.reload();
+            alert("Deleted successfully!");
+        }
+    });
+
+});
 
 
 

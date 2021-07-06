@@ -1,10 +1,26 @@
 const router = require('express').Router();
+let Prediction = require('../models/prediction.model')
+
+router.get('/home', checkAuth, async (req, res)=>{
+    const predictions = await Prediction.find();
+    res.render('home', {data: predictions});
+});
+
+router.get('/add_prediction', checkAuth, (req,res) =>{
+    res.render('add_prediction');
+});
+
+router.get('/update_prediction', checkAuth, async (req,res) =>{
+    const id = req.query.id;
+    const prediction = await Prediction.findById(id);
+    res.render('update_prediction', {data: prediction});
+});
 
 // router.get('/predictions', checkAuth, (req, res) => {
 //     res.render();
 // });
 
-// router.get('/site_manage', checkAuth, (req, res) => {
+// router.get('/report_bug', checkAuth, (req, res) => {
 //     res.render();
 // });
 
@@ -19,14 +35,6 @@ function checkAuth(req, res, next){
     }
 
     res.redirect('/');
-}
-
-function checkRole(req,res,next){
-    if(req.user.isAdmin){
-        return next();
-    }
-
-    res.redirect('/deliver');
 }
 
 module.exports = router;

@@ -2,223 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Qtscore - Football Tips, Scores & Predictions</title>
-  <link rel="shortcut icon" type="image/png" href="favicon-32x32.ico"/>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- qtzone_header_AdSense3_1x1_as -->
-  <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-2740507829180245"
-      data-ad-slot="1088387633"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-  <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-  <!-- =======================================================
-  * Template Name: Selecao - v4.3.0
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<%- include('./partials/head.ejs') %> 
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center" style="background-color: black;">
-    <div class="container d-flex align-items-center justify-content-between">
+  <%- include('./partials/nav.ejs') %> 
+  <br>
 
-      <div class="logo d-flex gap-4 align-items-center justify-content-center">
-        <a href="index.html"><img src="assets/img/score.png" alt="" class="img-fluid"></a>
-        <h1 style="color: white;">Qtscore</h1>
-      </div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="./live-scores-results/livescores-results.html">Live Scores</a></li>
-          <li><a class="nav-link scrollto " href="football-predictions.html">Today's Predictions</a></li>
-          <li><a class="nav-link scrollto " href="prediction-league.html">Prediction League</a></li>
-          <li><a class="nav-link scrollto" href="contact.html">Get in Touch</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
-    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>QtScore</span></h2>
-          <p class="animate__animated fanimate__adeInUp">We are the best source of well-researched football statistics, analysis and free football prediction site. Start winning now.</p>
-          <a href="football-predictions.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">View Predictions</a>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">About Us</h2>
-          <p class="animate__animated animate__fadeInUp">We are a team of seasoned sports prediction experts with years of experience providing consistent winning predictions. We are Qtscore.</p>
-          <a href="./about.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Our Mission</h2>
-          <p class="animate__animated animate__fadeInUp">To ensure consistent winning and provision of revenue for our subscribers, followers, and everyone that enjoys winning.</p>
-          <a href="./about.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">How to Profit</h2>
-          <p class="animate__animated animate__fadeInUp">We offer exclusive tips on how you can make the most of of our live predictions feed, allowing you to maximise the potential of our accurate predictions.</p>
-          <a href="./about.html" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
-
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-        <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="row p-5" data-aos="zoom-out" style="background-color: black;">
-          <div class="col-lg-3 cta-btn-container text-center align-items-center justify-content-center">
-            <a class="cta-btn" href="./live-scores-results/livescores-results.html">Live Scores</a>
-          </div>
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>View Todays Scores & Many More!</h3>
-            <p>At Qtscore, we give you access to EVERY single football league and competitions, analytics, results, and fixtures. We also have live updates of scores at your fingertips.</p>
-          </div>
-          
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="row p-5" data-aos="zoom-out" style="background: #f72;">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>View Predictions Now</h3>
-            <p>WE offer predictions on two of the most lucrative leagues for betting, and we are always seeking for support to increase our coverage accross europe and the world at large!</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="football-predictions.html" style="background-color: black;">View Predictions</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" style="background-color: black;">
+  <section class="p-5" id="analytics">
     <div class="container">
-      <h3>Qtscore</h3>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div class="d-sm-flex gap-5 py-5 my-5">
+        <h2>Analytics</h2>
+        <a href="#" class="btn btn-warning btn-lg">View Google Analytics</a>
       </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Qtscore</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Template from <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        Built by <a href="https://kristien.netlify.app">Kristien Nyamutsaka</a>
-      </div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse iusto, repudiandae ea quisquam voluptate ipsam aliquid saepe quasi facilis qui.</p>
     </div>
-  </footer><!-- End Footer -->
+  </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <section class="p-5" id="prediction">
+    <div class="container">
+      <div class="d-sm-flex gap-5 py-5 my-5">
+        <h2>Manage Predictions</h2>
+        <a href="/add_prediction" class="btn btn-success btn-lg">Add Prediction</a>
+      </div>
+      <div id="prediction-cards" class="row d-flex align-items-center justify-content-center">
+        <%- include('./partials/prediction_card.ejs') %> 
+      </div>
+      
+    </div>
+  </section>
 
-  <!-- Vendor JS Files -->
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <section class="p-5" id="report">
+    <div class="container">
+      <h2>Report Bug</h2>
+      <form action="" class="d-flex flex-column align-items-center justify-content-center">
+        <div class="form-group my-3">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" style="width: 50vw">
+        </div>
+        <div class="form-group my-3">
+          <label for="bug">Bug Type</label>
+          <select class="form-control" id="bug" name="bug" style="width: 50vw">
+            <option>General Maintanence</option>
+            <option>Button Issue</option>
+            <option>Link Issue</option>
+            <option>Stlying Issue</option>
+            <option>Page Loading</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group my-3">
+          <label for="exampleFormControlTextarea1">Additional Information</label>
+          <textarea class="form-control" id="info" name="info" rows="3" style="width: 50vw"></textarea>
+        </div>
+        <button class="btn-primary btn btn-lg my-4">Send Report</button>
+      </form>
+    </div>
+  </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- advertising I4OVoxYf4Vce-FUwySy-uo_rsdcibQuVoyatSxDS54Pn34nlt8pUCmJTJ4mxaQKUjF0vMSkSkOHOkuAsLcPh4Q==-->
-							<script data-cfasync="false"  id="clevernt" type="text/javascript">
-							 (function (document, window) {
-                var c = document.createElement("script");
-                c.type = "text/javascript"; c.async = !0; c.id = "CleverNTLoader23741";  c.setAttribute("data-target",window.name); c.setAttribute("data-callback","put-your-callback-macro-here");
-                c.src = "//clevernt.com/scripts/1997915e3a5f8b1ec859b58c0e25208d.min.js?20210702=" + Math.floor((new Date).getTime());
-                var a = !1;
-                try {
-                    a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
-                } catch (e) {
-                    a = !1;
-                }
-                a || ( a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
-                a.parentNode.insertBefore(c, a);
-            })(document, window);
-                                </script>
-                                <!-- end advertising -->
+  <%- include('./partials/footer.ejs') %> 
 
 </body>
 

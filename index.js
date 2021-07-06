@@ -48,7 +48,7 @@ app.use(session({
    secret: process.env.SECRET_KEY,
    resave: false,
    saveUninitialized: false,
-//    store: MongoStore.create({mongoUrl: uri})
+   store: MongoStore.create({mongoUrl: uri})
 }));
 
 app.use(passport.initialize());
@@ -59,7 +59,7 @@ app.get('/', (req,res) =>{
 });
 
 app.post('/login', passport.authenticate('local', {
-    successRedirect: 'home',
+    successRedirect: '/home',
     failureRedirect: '/',
     failureFlash: true
 }));
@@ -76,4 +76,5 @@ app.listen(port, (err) => {
     if(err) throw err;
     console.log(`Listening on port ${port}...`);
 });
+
 
