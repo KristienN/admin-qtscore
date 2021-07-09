@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const passport = require('passport');
 let Prediction = require('../models/prediction.model')
 
 router.get('/home', checkAuth, async (req, res)=>{
