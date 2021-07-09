@@ -17,18 +17,6 @@ router.get('/update_prediction', checkAuth, async (req,res) =>{
     res.render('update_prediction', {data: prediction});
 });
 
-// router.get('/predictions', checkAuth, (req, res) => {
-//     res.render();
-// });
-
-// router.get('/report_bug', checkAuth, (req, res) => {
-//     res.render();
-// });
-
-// router.get('/analytics', checkAuth, (req, res) => {
-//     res.render();
-// });
-
 
 function checkAuth(req, res, next){
     if(req.isAuthenticated()){

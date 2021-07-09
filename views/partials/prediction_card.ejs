@@ -1,17 +1,17 @@
 <% for(var i = 0; i< data.length; i++) { %> 
 
-<div class="col-sm-4 mx-2 mb-3 d-flex flex-column p-4 shadow" style="border: 3px solid black;">
-    <div id="names" class="d-sm-flex gap-5 align-items-center">
-        <h2><%= data[i].home_team%></h2>
-        <p>vs</p>
-        <h2><%= data[i].away_team%></h2>
+<div class="col-md-4 mx-2 mb-3 d-flex flex-column p-4 shadow text-light" style="border: 3px solid black; background-color: black;">
+    <div id="names" class="d-sm-flex gap-5 align-items-center text-center">
+        <h3 style="color: #f72;"><%= data[i].home_team%></h3>
+        <p style="color: #f72;">vs</p>
+        <h3 style="color: #f72;"><%= data[i].away_team%></h3>
     </div>
     <div id="scores" class="text-center">
         <h2><%= data[i].home_score%> - <%= data[i].away_score%></h2>
     </div>
     <div id="buttons" class="d-sm-flex text-center justify-content-between">
-        <a href="" class="btn btn-danger btn-lg" id="delete-btn" data-id="<%= data[i]._id%>">Remove <i class="bi bi-x"></i></a>
-        <a href="update_prediction?id=<%= data[i]._id%>" class="btn btn-primary btn-lg">Edit <i class="bi bi-pencil"></i></a>
+        <a href="" class="btn btn-danger btn-sm" id="delete-btn" data-id="<%= data[i]._id%>">Remove  <i class="bi bi-x"></i></a>
+        <a href="update_prediction?id=<%= data[i]._id%>" class="btn btn-primary btn-sm">Edit  <i class="bi bi-pencil"></i></a>
     </div>
 </div>
 

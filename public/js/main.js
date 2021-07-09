@@ -37,14 +37,20 @@ $(document).ready(function(){
     })
 
     $('#delete-btn').click(function(e){
+        e.preventDefault();
         const id = $(this).attr("data-id");
+        // console.log(id);
         if(confirm("Are you sure you want to delete?")){
+          
             $.ajax({
                 type: "DELETE",
                 url: `/prediction/delete/${id}`,
+                success: function(response){
+                  location.reload();
+                  alert("Deleted successfully!");
+                }
             });
-            location.reload();
-            alert("Deleted successfully!");
+            
         }
     });
 

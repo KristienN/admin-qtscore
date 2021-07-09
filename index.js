@@ -54,7 +54,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/', (req,res) =>{
+app.get('/', checkNotAuth, (req,res) =>{
     res.render('login');
 });
 
@@ -79,4 +79,14 @@ app.listen(port, (err) => {
     console.log(`Listening on port ${port}...`);
 });
 
+
+function checkNotAuth(req, res, next){
+    if(req.isAuthenticated()){
+        res.redirect('/home');
+    }
+
+    return next;
+
+    
+}
 
