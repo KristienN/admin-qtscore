@@ -24,6 +24,7 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 app.use('/vendor', express.static(__dirname + 'public/vendor'));
+app.use('/docs', express.static(__dirname + 'public/docs'));
 
 mongoose.connect(uri, {useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true});
 const connection = mongoose.connection;
