@@ -29,9 +29,11 @@ $(document).ready(function(){
             url: `/prediction/update/${id}`,
             data: data,
             success: function (response) {
-                alert("Updated succesfully")
+                console.log("Updated")
             }
         });
+        location.reload();
+        alert("Updated succesfully");
     })
 
     $('#delete-btn').click(function(e){

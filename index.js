@@ -67,8 +67,10 @@ app.post('/login', passport.authenticate('local', {
 const homeRoute = require('./routes/home');
 const predictionRoute = require('./routes/prediction');
 const userRoute = require('./routes/user');
+const contactRoute = require('./routes/contact');
 
 app.use('/', homeRoute);
+app.use('contact', contactRoute);
 app.use('/prediction', predictionRoute);
 app.use('/user', userRoute);
 
