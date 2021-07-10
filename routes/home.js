@@ -4,7 +4,7 @@ let Prediction = require('../models/prediction.model')
 
 router.get('/home', checkAuth, async (req, res)=>{
     const predictions = await Prediction.find();
-    res.render('home', {data: predictions});
+    res.render('home', {data: predictions, msg: null});
 });
 
 router.get('/add_prediction', checkAuth, (req,res) =>{

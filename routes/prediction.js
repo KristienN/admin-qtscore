@@ -22,15 +22,17 @@ router.post('/add', async (req, res)=> {
     });
 
     await newPrediction.save()
-    .then(() => res.json("Prediction added"))
+    .then(async () => {
+        res.redirect('../home');
+    })
     .catch(err => res.status(500).json("Error", err));
 });
 
 router.put("/update/:id", async (req,res)=>{
     const id = req.params.id;
     await Prediction.findByIdAndUpdate(id, req.body, {useFindAndModify: false})
-    .then(data => {
-        res.json("Updated Prediction")
+    .then(async(data) => {
+        res.json("Updated")
     })
     .catch(err =>{
         res.status(500).json("Error: " + err);

@@ -1,0 +1,10 @@
+#pred-card button {
+  display: none;
+}
+
+#pred-card:hover button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=custom.css.map */

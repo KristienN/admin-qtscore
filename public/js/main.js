@@ -7,7 +7,7 @@
 
 $(document).ready(function(){
 
-    $('#update-btn').click(function(e){
+    $('.update-btn').click(function(e){
         e.preventDefault();
         const id = $('#id').val();
 
@@ -29,27 +29,25 @@ $(document).ready(function(){
             url: `/prediction/update/${id}`,
             data: data,
             success: function (response) {
-                console.log("Updated")
+                alert("Updated");
+                
             }
         });
-        location.reload();
-        alert("Updated succesfully");
+
     })
 
-    $('#delete-btn').click(function(e){
-        e.preventDefault();
+    $('.delete-btn').click(function(e){
         const id = $(this).attr("data-id");
-        // console.log(id);
+        console.log(id);
         if(confirm("Are you sure you want to delete?")){
-          
+            
             $.ajax({
                 type: "DELETE",
                 url: `/prediction/delete/${id}`,
-                success: function(response){
-                  location.reload();
-                  alert("Deleted successfully!");
-                }
             });
+
+
+           alert("Delete Succesful, please reload page")
             
         }
     });
