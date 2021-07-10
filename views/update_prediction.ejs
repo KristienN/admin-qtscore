@@ -13,6 +13,11 @@
                 <div class="form-group my-5">
                     <input type="text" class="form-control" id="id" name="id" value="<%= data._id %> " hidden>
                 </div>
+
+                <div class="form-group my-3">
+                    <label for="exampleFormControlTextarea1">Country</label>
+                    <input class="form-control" id="country" name="country" rows="3" style="width: 50vw" value="<%= data.country %> "></input>
+                </div>
                 <div class="form-group row my-5">
                     <div class="col-sm-6">
                         <label for="home_team">Home Team</label>
@@ -23,15 +28,28 @@
                         <input type="away_team" class="form-control" id="away_team" name="away_team" aria-describedby="emailHelp" value="<%= data.away_team %>" style="width: 30vw;">
                     </div>
                 </div>
-                <div class="form-group row my-5">
-                    <div class="col-sm-6">
-                        <label for="home_score">Home Score</label>
-                        <input type="number" class="form-control" id="home_score" name="home_score" aria-describedby="emailHelp" value=<%= data.home_score %>  style="width: 10vw;">
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="away_score">Away Score</label>
-                        <input type="number" class="form-control" id="away_score" name="away_score" aria-describedby="emailHelp" value=<%= data.away_score %>  style="width: 10vw;">
-                    </div>
+                <div class="form-group my-5">
+                    <label for="home_team">Tip</label>
+                    <select class="form-control" id="tip" name="tip" style="width: 50vw" selected="<%= data.tip%>">
+                        <option>Home win</option>
+                        <option>Away win</option>
+                        <option>Draw</option>
+                        <option>Home win or Draw</option>
+                        <option>Away win or Draw</option>
+                        <option>Both Teams to Score</option>
+                        <option>Away to Score</option>
+                        <option>Home to Score</option>
+                        <option>Over 2.5 Goals</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group my-3">
+                    <label for="exampleFormControlTextarea1">Specify If Other</label>
+                    <textarea class="form-control" id="other" name="other" rows="3" style="width: 50vw"></textarea>
+                </div>
+                <div class="form-group my-5">
+                    <label for="home_team">Date</label>
+                        <input type="date" class="form-control" id="date" name="date" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 50vw;" value="<%= data.date %>" required>
                 </div>
 
                 <button class="btn btn-lg btn-primary update-btn" id="update-btn">Update</button>
