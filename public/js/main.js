@@ -10,17 +10,18 @@ $(document).ready(function(){
     $('.update-btn').click(function(e){
         e.preventDefault();
         const id = $('#id').val();
-
+        const country = $('#country').val();
         const home_team = $('#home_team').val();
         const away_team = $('#away_team').val();
-        const home_score = $('#home_score').val();
-        const away_score = $('#away_score').val();
+        const tip = $('#tip').val();
+        const date = $('#date').val();
 
         const data = {
-            home_team,
-            away_team,
-            home_score,
-            away_score
+          country,
+          home_team,
+          away_team,
+          tip,
+          date
         };
 
 
