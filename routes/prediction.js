@@ -11,14 +11,21 @@ router.get('/', async (req, res)=> {
 router.post('/add', async (req, res)=> {
     const home_team = req.body.home_team;
     const away_team = req.body.away_team;
-    const home_score = req.body.home_score;
-    const away_score = req.body.away_score;
+    const tip = req.body.tip;
+    const country = req.body.country;
+    const date = req.body.date;
+    
+
+    if(tip == "Other"){
+        tip = req.body.other;
+    }
 
     const newPrediction = Prediction({
+        country,
         home_team,
         away_team,
-        home_score,
-        away_score
+        tip,
+        date
     });
 
     await newPrediction.save()
