@@ -55,8 +55,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/', checkNotAuth, (req,res) =>{
+app.get('/',  (req,res) =>{
     res.render('login');
+});
+
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
 });
 
 app.post('/login', passport.authenticate('local', {
@@ -80,14 +85,4 @@ app.listen(port, (err) => {
     console.log(`Listening on port ${port}...`);
 });
 
-
-function checkNotAuth(req, res, next){
-    if(req.isAuthenticated()){
-        res.redirect('/home');
-    }
-
-    return next;
-
-    
-}
 

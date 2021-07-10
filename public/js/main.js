@@ -52,6 +52,20 @@ $(document).ready(function(){
         }
     });
 
+    $('.logout-btn').click(function(e){
+        if(confirm("Are you sure you want to log-out?")){
+            
+            $.ajax({
+                type: "GET",
+                url: `/logout`,
+                success: function(data){
+                  console.log("logged out")
+                  location.reload();
+                }
+            });          
+        }
+    });
+
 });
 
 
