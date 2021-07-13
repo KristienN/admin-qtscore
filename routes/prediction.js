@@ -14,6 +14,7 @@ router.post('/add', async (req, res)=> {
     const tip = req.body.tip;
     const country = req.body.country;
     const date = req.body.date;
+    const page = req.body.page;
     
 
     if(tip == "Other"){
@@ -25,7 +26,8 @@ router.post('/add', async (req, res)=> {
         home_team,
         away_team,
         tip,
-        date
+        date,
+        page
     });
 
     await newPrediction.save()

@@ -12,8 +12,35 @@
 
             <form action="prediction/add" method="POST">
                 <div class="form-group my-5">
-                    <label for="home_team">Country</label>
-                        <input type="text" class="form-control" id="country" name="country" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 50vw;">
+                    <label for="Country">Country Flag</label>
+                    <select class="form-select form-select-lg mb-3 w-50" id="country" name="country" aria-label=".form-select-lg example">
+                        <option selected>Select Country</option>
+                        <option value="https://www.countryflags.io/ar/flat/64.png">Argentina</option>
+                        <option value="https://www.countryflags.io/ae/flat/64.png">Austria</option>
+                        <option value="https://www.countryflags.io/be/flat/64.png">Belgium</option>
+                        <option value="https://www.countryflags.io/br/flat/64.png">Brazil</option>
+                        <option value="https://www.countryflags.io/dk/flat/64.png">Denmark</option>
+                        <option value="https://www.countryflags.io/gb/flat/64.png">England</option>
+                        <option value="https://www.countryflags.io/fi/flat/64.png">Finland</option>
+                        <option value="https://www.countryflags.io/fr/flat/64.png">France</option>
+                        <option value="https://www.countryflags.io/de/flat/64.png">Germany</option>
+                        <option value="https://www.countryflags.io/gr/flat/64.png">Greece</option>
+                        <option value="https://www.countryflags.io/be/flat/64.png">Hungary</option>
+                        <option value="https://www.countryflags.io/ie/flat/64.png">Ireland</option>
+                        <option value="https://www.countryflags.io/it/flat/64.png">Italy</option>
+                        <option value="https://www.countryflags.io/ng/flat/64.png">Nigeria</option>
+                        <option value="https://www.countryflags.io/no/flat/64.png">Nowray</option>
+                        <option value="https://www.countryflags.io/pl/flat/64.png">Poland</option>
+                        <option value="https://www.countryflags.io/pt/flat/64.png">Portugal</option>
+                        <option value="https://www.countryflags.io/gb/flat/64.png">Scotland</option>
+                        <option value="https://www.countryflags.io/za/flat/64.png">South Africa</option>
+                        <option value="https://www.countryflags.io/es/flat/64.png">Spain</option>
+                        <option value="https://www.countryflags.io/se/flat/64.png">Sweden</option>
+                        <option value="https://www.countryflags.io/ch/flat/64.png">Switzerland</option>
+                        <option value="https://www.countryflags.io/us/flat/64.png">United States of America</option>
+                        <option value="https://www.countryflags.io/gb/flat/64.png">Wales</option>
+                    </select>
+
                 </div>
                 <div class="form-group row my-5">
                     <div class="col-sm-6">
@@ -48,6 +75,13 @@
                 <div class="form-group my-5">
                     <label for="home_team">Date</label>
                         <input type="date" class="form-control" id="date" name="date" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 50vw;">
+                </div>
+                <div class="form-group my-5">
+                    <label for="home_team">Page</label>
+                    <select class="form-control" id="page" name="page" style="width: 50vw">
+                        <option value=1 >Personal Prediction</option>
+                        <option value=2 >Tomorrows Prediction</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="btn btn-lg btn-success">Submit Prediction</button>

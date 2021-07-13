@@ -7,7 +7,8 @@ const predictionSchema = new Schema({
     home_team : {type: String, required: true},
     away_team : {type: String, required: true},
     tip:{type: String, required: true},
-    date:{type: Date, required: true}
+    date:{type: Date, required: true},
+    page: {type: Number, required: true}
 }, {timestamps: true});
 
 const Prediction = mongoose.model('Prediction', predictionSchema);
