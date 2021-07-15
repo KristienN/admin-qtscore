@@ -13,7 +13,7 @@
             <form action="prediction/add" method="POST">
                 <div class="form-group my-5">
                     <label for="Country">Country Flag</label>
-                    <select class="form-select form-select-lg mb-3 w-50" id="country" name="country" aria-label=".form-select-lg example">
+                    <select class="form-select form-select-lg mb-3 w-50" id="country" name="country" aria-label=".form-select-lg example" required>
                         <option selected>Select Country</option>
                         <option value="https://www.countryflags.io/ar/flat/64.png">Argentina</option>
                         <option value="https://www.countryflags.io/ae/flat/64.png">Austria</option>
@@ -45,17 +45,17 @@
                 <div class="form-group row my-5">
                     <div class="col-sm-6">
                         <label for="home_team">Home Team</label>
-                        <input type="text" class="form-control" id="home_team" name="home_team" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 30vw;">
+                        <input type="text" class="form-control" id="home_team" name="home_team" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 30vw;" required>
                     </div>
                     <div class="col-sm-6">
                         <label for="away_team">Away Team</label>
-                        <input type="text" class="form-control" id="away_team" name="away_team" aria-describedby="emailHelp" placeholder="Enter Away Team" style="width: 30vw;">
+                        <input type="text" class="form-control" id="away_team" name="away_team" aria-describedby="emailHelp" placeholder="Enter Away Team" style="width: 30vw;" required>
                     </div>
                 </div>
 
                 <div class="form-group my-5">
                     <label for="home_team">Tip</label>
-                    <select class="form-control" id="tip" name="tip" style="width: 50vw">
+                    <select class="form-control" id="tip" name="tip" style="width: 50vw" required>
                         <option>Home win</option>
                         <option>Away win</option>
                         <option>Draw</option>
@@ -74,11 +74,11 @@
                 </div>
                 <div class="form-group my-5">
                     <label for="home_team">Date</label>
-                        <input type="date" class="form-control" id="date" name="date" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 50vw;">
+                        <input type="date" class="form-control" id="date" name="date" aria-describedby="emailHelp" placeholder="Enter Home Team " style="width: 50vw;" required>
                 </div>
                 <div class="form-group my-5">
                     <label for="home_team">Page</label>
-                    <select class="form-control" id="page" name="page" style="width: 50vw">
+                    <select class="form-control" id="page" name="page" style="width: 50vw" required>
                         <option value=1 >Personal Prediction</option>
                         <option value=2 >Tomorrows Prediction</option>
                     </select>
