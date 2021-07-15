@@ -21,6 +21,10 @@ router.post('/add', async (req, res)=> {
         tip = req.body.other;
     }
 
+    if(!date){
+        date = new Date();
+    }
+
     const newPrediction = Prediction({
         country,
         home_team,
@@ -29,6 +33,8 @@ router.post('/add', async (req, res)=> {
         date,
         page
     });
+
+    
 
     await newPrediction.save()
     .then(async () => {

@@ -9,6 +9,11 @@
     <section class="p-5" id="add">
         <div class="container">
             <h2 class="my-5">Add Prediction</h2>
+            <% if(messages.error) { %>
+            <div class="alert alert-danger" role="alert">
+              <%= messages.error; %>.  Please Try Again. 
+            </div>
+        <% } %> 
 
             <form action="prediction/add" method="POST">
                 <div class="form-group my-5">

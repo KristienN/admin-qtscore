@@ -7,6 +7,12 @@
 
 $(document).ready(function(){
 
+  let today = new Date()
+  today = today.toISOString().toString().substr(0,10);
+    console.log(today);
+  $('#date').val() = today;
+
+
     $('.update-btn').click(function(e){
         e.preventDefault();
         const id = $('#id').val();
@@ -15,6 +21,11 @@ $(document).ready(function(){
         const away_team = $('#away_team').val();
         const tip = $('#tip').val();
         const date = $('#date').val();
+
+        if(!date){
+          date = new Date();
+          console.log(date);
+        }
 
         const data = {
           country,
