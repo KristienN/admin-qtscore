@@ -16,9 +16,63 @@
                     <input type="text" class="form-control" id="id" name="id" value="<%= data._id %> " hidden>
                 </div>
 
-                <div class="form-group my-3">
-                    <label for="exampleFormControlTextarea1">Country</label>
-                    <input class="form-control" id="country" name="country" rows="3" style="width: 50vw" value="<%= data.country %> "></input>
+                <div class="form-group my-5">
+                    <label for="Country">Country Flag</label>
+                    <select class="form-select form-select-lg mb-3 w-50" id="country" name="country" value="<%= data.country %>" aria-label=".form-select-lg example" required>
+                        <option selected>Select Country</option>
+                        <option value="https://www.countryflags.io/ar/flat/64.png">Argentina</option>
+                        <option value="https://www.countryflags.io/au/flat/64.png">Austrailia</option>
+                        <option value="https://www.countryflags.io/at/flat/64.png">Austria</option>
+                        <option value="https://www.countryflags.io/bh/flat/64.png">Bahrain</option>
+                        <option value="https://www.countryflags.io/be/flat/64.png">Belgium</option>
+                        <option value="https://www.countryflags.io/br/flat/64.png">Brazil</option>
+                        <option value="https://www.countryflags.io/ca/flat/64.png">Canada</option>
+                        <option value="https://www.countryflags.io/cm/flat/64.png">Cameroon</option>
+                        <option value="https://www.countryflags.io/cl/flat/64.png">Chile</option>
+                        <option value="https://www.countryflags.io/cn/flat/64.png">China</option>
+                        <option value="https://www.countryflags.io/dk/flat/64.png">Denmark</option>
+                        <option value="https://www.countryflags.io/eg/flat/64.png">Egypt</option>
+                        <option value="https://www.countryflags.io/gb/flat/64.png">England</option>
+                        <option value="https://www.countryflags.io/ee/flat/64.png">Estonia</option>
+                        <option value="https://www.countryflags.io/et/flat/64.png">Ethiopia</option>
+                        <option value="https://www.countryflags.io/fi/flat/64.png">Finland</option>
+                        <option value="https://www.countryflags.io/fr/flat/64.png">France</option>
+                        <option value="https://www.countryflags.io/de/flat/64.png">Germany</option>
+                        <option value="https://www.countryflags.io/gh/flat/64.png">Ghana</option>
+                        <option value="https://www.countryflags.io/gr/flat/64.png">Greece</option>
+                        <option value="https://www.countryflags.io/hu/flat/64.png">Hungary</option>
+                        <option value="https://www.countryflags.io/in/flat/64.png">India</option>
+                        <option value="https://www.countryflags.io/iq/flat/64.png">Iraq</option>
+                        <option value="https://www.countryflags.io/ie/flat/64.png">Ireland</option>
+                        <option value="https://www.countryflags.io/it/flat/64.png">Italy</option>
+                        <option value="https://www.countryflags.io/jp/flat/64.png">Japan</option>
+                        <option value="https://www.countryflags.io/jo/flat/64.png">Jordan</option>
+                        <option value="https://www.countryflags.io/mx/flat/64.png">Mexico</option>
+                        <option value="https://www.countryflags.io/nz/flat/64.png">New Zealand</option>
+                        <option value="https://www.countryflags.io/ng/flat/64.png">Nigeria</option>
+                        <option value="https://www.countryflags.io/no/flat/64.png">Nowray</option>
+                        <option value="https://www.countryflags.io/jp/flat/64.png">Japan</option>
+                        <option value="https://www.countryflags.io/ph/flat/64.png">Pakistan</option>
+                        <option value="https://www.countryflags.io/pl/flat/64.png">Poland</option>
+                        <option value="https://www.countryflags.io/pt/flat/64.png">Portugal</option>
+                        <option value="https://www.countryflags.io/qa/flat/64.png">Qatar</option>
+                        <option value="https://www.countryflags.io/ro/flat/64.png">Romania</option>
+                        <option value="https://www.countryflags.io/ru/flat/64.png">Russia</option>
+                        <option value="https://www.countryflags.io/sa/flat/64.png">Saudi Arabia</option>
+                        <option value="https://www.countryflags.io/gb/flat/64.png">Scotland</option>
+                        <option value="https://www.countryflags.io/za/flat/64.png">South Africa</option>
+                        <option value="https://www.countryflags.io/es/flat/64.png">Spain</option>
+                        <option value="https://www.countryflags.io/se/flat/64.png">Sweden</option>
+                        <option value="https://www.countryflags.io/ch/flat/64.png">Switzerland</option>
+                        <option value="https://www.countryflags.io/tz/flat/64.png">Tanzania</option>
+                        <option value="https://www.countryflags.io/tk/flat/64.png">Turkey</option>
+                        <option value="https://www.countryflags.io/tn/flat/64.png">Tunisa</option>
+                        <option value="https://www.countryflags.io/uk/flat/64.png">Ukraine</option>
+                        <option value="https://www.countryflags.io/ae/flat/64.png">United Arab of Emirates</option>
+                        <option value="https://www.countryflags.io/us/flat/64.png">United States of America</option>
+                        <option value="https://www.countryflags.io/gb/flat/64.png">Wales</option>
+                    </select>
+
                 </div>
                 <div class="form-group row my-5">
                     <div class="col-sm-6">
