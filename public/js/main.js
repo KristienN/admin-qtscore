@@ -7,25 +7,64 @@
 
 $(document).ready(function(){
 
-  let today = new Date()
-  today = today.toISOString().toString().substr(0,10);
-    console.log(today);
-  $('#date').val() = today;
+  let id = $('#id').val();
+    $.ajax({
+      type: "GET",
+      url: `/prediction/${id}`,
+      success: function (response) {
+        // console.log(response);
+        $('#country').val(response.country).change()
+        $('#tip').val(response.tip).change()
+        $('#page').val(response.page).change()
 
+        let date = response.date;
+        date = date.substr(0,10);
+        // console.log(date);
+        $('#date').val(date).change()
+      }
+    });
+
+
+    $('.switch').click(function(e){
+      e.preventDefault();
+
+      if(confirm("Are you sure you would like to swtich the dates and delete all of the unwanted predictions")){
+        $.ajax({
+          method: "DELETE",
+          url:"delete_many",
+          success: function(response){
+            
+            $.ajax({
+              method: "PUT",
+              url: "prediction/update_many",
+              success: function(res){
+                alert("Switched Dates succesfully")
+              }
+            })
+          }
+        })
+      }
+    })
+
+
+
+    
 
     $('.update-btn').click(function(e){
-        e.preventDefault();
-        const id = $('#id').val();
-        const country = $('#country').val();
-        const home_team = $('#home_team').val();
-        const away_team = $('#away_team').val();
-        const tip = $('#tip').val();
-        const date = $('#date').val();
+
+        let id = $('#id').val();
+        let country = $('#country').val();
+        let home_team = $('#home_team').val();
+        let away_team = $('#away_team').val();
+        let date = $('#date').val();
+        let tip = $('#tip').val();
+        if(tip == "other"){
+          tip = $('#other').val();
+        }
 
         if(!date){
           date = new Date();
-          console.log(date);
-        }
+        } 
 
         const data = {
           country,
@@ -35,13 +74,12 @@ $(document).ready(function(){
           date
         };
 
-
         $.ajax({
             type: "PUT",
             url: `/prediction/update/${id}`,
             data: data,
             success: function (response) {
-                alert("Updated");
+                alert("Updated Succesfully.");
                 
             }
         });

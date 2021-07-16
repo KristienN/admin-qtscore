@@ -1,20 +1,20 @@
 <% for(var i = 0; i< data.length; i++) { %> 
 
-<div class="col-md-5 mx-2 mb-3 d-flex flex-column p-4 shadow text-light text-center" style="border: 3px solid black; background-color: black;" id="pred-card">
+<div class="col-md-5 mx-2 mb-3 d-flex flex-column p-3 shadow text-light text-center" style="border: 3px solid black; background-color: black;" id="pred-card">
     <div class="date-country d-md-flex align-items-center justify-content-between px-3">
-        <img src="<%= data[i].country %> " class="img-fluid rounded">
-        <p class="text-right"><%= data[i].date.toString().substring(0,15)%></p>
+        <img src="<%= data[i].country %> " width="32px" class="img-fluid rounded">
+        <p class="text-right" style="font-size: 12px;"><%= data[i].date.toString().substring(0,15)%></p>
     </div>
     <div id="names" class="d-lg-flex gap-5 align-items-center justify-content-center text-center">
-        <h3 style="color: #f72;"><%= data[i].home_team%></h3>
-        <p style="color: #f72;">vs</p>
-        <h3 style="color: #f72;"><%= data[i].away_team%></h3>
+        <h3 style="color: #f72; font-size: 18px;"><%= data[i].home_team%></h3>
+        <p style="color: #f72;font-size: 12px;">vs</p>
+        <h3 style="color: #f72;font-size: 18px;"><%= data[i].away_team%></h3>
     </div>
     <div id="scores" class="text-center">
-        <h5>Tip: <%= data[i].tip%></h5>
+        <h5 style="font-size: 14px;">Tip: <%= data[i].tip%></h5>
     </div>
     <div id="page" class="text-center">
-        <h5>Page: <%= data[i].page%></h5>
+        <h5 style="font-size: 14px;">Page: <%= data[i].page%></h5>
     </div>
     <div id="buttons" class="d-md-flex text-center justify-content-between">
         <a class="btn btn-danger btn-sm delete-btn" data-id="<%= data[i]._id%>">Remove  <i class="bi bi-x"></i></a>

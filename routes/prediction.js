@@ -8,16 +8,24 @@ router.get('/', async (req, res)=> {
     }).catch(err => res.status(500).json("Error + ", err));
 })
 
+router.get('/:id', async (req, res)=> {
+    let id = req.params.id
+    await Prediction.findById(id)
+    .then((result) => {
+        res.staus(201).json(result);
+    }).catch(err => res.status(500).json("Error + ", err));
+})
+
 router.post('/add', async (req, res)=> {
-    const home_team = req.body.home_team;
-    const away_team = req.body.away_team;
-    const tip = req.body.tip;
-    const country = req.body.country;
-    const date = req.body.date;
-    const page = req.body.page;
+    let home_team = req.body.home_team;
+    let away_team = req.body.away_team;
+    let tip = req.body.tip;
+    let country = req.body.country;
+    let date = req.body.date;
+    let page = req.body.page;
     
 
-    if(tip == "Other"){
+    if(tip == "other"){
         tip = req.body.other;
     }
 
@@ -53,6 +61,26 @@ router.put("/update/:id", async (req,res)=>{
         res.status(500).json("Error: " + err);
     })
 });
+
+router.put("/update_many", async (req,res)=>{
+    await Prediction.updateMany({page: 2}, {page: 1})
+    .then(async(data) => {
+        res.json("Switched Dates ")
+    })
+    .catch(err =>{
+        res.status(500).json("Error: " + err);
+    })
+});
+
+router.delete("/delete_many", async (req, res) => {
+    await Prediction.deleteMany({page: 1})
+    .then(data =>{
+        res.json("Deleted");
+    })
+    .catch(err=>{
+        res.status(500).json("Error: " + err);
+    })
+})
 
 router.delete("/delete/:id", async (req, res)=>{
     const id = req.params.id;
