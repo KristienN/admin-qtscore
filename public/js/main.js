@@ -31,7 +31,7 @@ $(document).ready(function(){
       if(confirm("Are you sure you would like to swtich the dates and delete all of the unwanted predictions")){
         $.ajax({
           method: "DELETE",
-          url:"delete_many",
+          url:"prediction/delete_many",
           success: function(response){
             
             $.ajax({
