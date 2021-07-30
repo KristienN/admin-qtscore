@@ -1,5 +1,12 @@
 Admin Panel for Qtscore.com
 
+Modules Used: 
+Express JS & Session
+Bcrypt
+Passport JS (local stategy)
+Mongoose
+EJS (For Views)
+
 For Administraive Use:
 
 No.     Page
