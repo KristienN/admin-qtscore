@@ -16,7 +16,28 @@
     </div>
     <% } %> 
 
-  <section class="p-5" id="analytics">
+  <section class="p-5" id="prediction">
+    <div class="container">
+      <div class="d-sm-flex gap-5 py-5 my-5">
+        <h2>Manage Predictions</h2>
+        <a href="/add_prediction" class="btn btn-success btn-lg">Add Prediction <i class="ri ri-add-circle-line"></i></a>
+        <a  class="btn btn-dark btn-lg align-items-center switch">Switch Days <i class="ri ri-restart-line"></i></a>
+      </div>
+      <p style="font-style: italic;">(*Page Numbers: 1(Personal Prediction), 2(Tomorrows Predictions). *Switch Days button will delete all of todays predictions and move tomorrows predictions to today.)</p>
+      <div id="prediction-cards" class="row d-flex align-items-center justify-content-between px-5">
+        <%- include('./partials/prediction_card.ejs') %> 
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="p-5">
+    <div class="container">
+      <img src="img/undraw_Mobile_payments_re_7udl.svg" class="img-fluid" width="700px" alt="">
+    </div>
+  </section>
+
+    <section class="p-5" id="analytics">
     <div class="container">
       <div class="d-sm-flex gap-5 py-5 my-5">
         <h2>Analytics</h2>
@@ -36,27 +57,6 @@ You get the insights that matter — along with the ability to put them to work 
   <section class="p-5">
     <div class="container d-flex justify-content-end">
       <img src="img/undraw_Investment_data_re_sh9x.svg" class="img-fluid" width="700px" alt="">
-    </div>
-  </section>
-
-  <section class="p-5" id="prediction">
-    <div class="container">
-      <div class="d-sm-flex gap-5 py-5 my-5">
-        <h2>Manage Predictions</h2>
-        <a href="/add_prediction" class="btn btn-success btn-lg">Add Prediction <i class="ri ri-add-circle-line"></i></a>
-        <a  class="btn btn-dark btn-lg align-items-center switch">Switch Days <i class="ri ri-restart-line"></i></a>
-      </div>
-      <p style="font-style: italic;">(*Page Numbers: 1(Personal Prediction), 2(Tomorrows Predictions). *Switch Days button will delete all of todays predictions and move tomorrows predictions to today.)</p>
-      <div id="prediction-cards" class="row d-flex align-items-center justify-content-between px-5">
-        <%- include('./partials/prediction_card.ejs') %> 
-      </div>
-      
-    </div>
-  </section>
-
-  <section class="p-5">
-    <div class="container">
-      <img src="img/undraw_Mobile_payments_re_7udl.svg" class="img-fluid" width="700px" alt="">
     </div>
   </section>
 
